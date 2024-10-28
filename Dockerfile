@@ -1,11 +1,5 @@
-# Start from a base image
-FROM tomcat
 
-# Set the working directory (optional)
+FROM tomcat
 WORKDIR /usr/local/tomcat
 
-RUN cp -R webapps.dist/* webapps/
-RUN cd webapps/
-RUN curl -u admin:sowmya -O http://35.154.107.84:8081/repository/sample-release/org/example/devops/2.0.2/devops-2.0.2.war
-
-# If there are other setup commands, include them here
+RUN curl -u admin:sowmya -O webapps/ROOT.war http://43.204.98.209:8081/repository/sample-release/org/example/devops.war/1.0/devops.war-1.0.war
