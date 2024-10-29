@@ -18,4 +18,4 @@ spec:
       - name: c1
         image: sowmyagummalla/devops0:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
